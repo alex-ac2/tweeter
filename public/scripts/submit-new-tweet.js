@@ -23,8 +23,14 @@ $(document).ready(function() {
       $.ajax({
         type: 'POST',
         url: `/tweets`,
-        data: $tweetMessage
+        data: $tweetMessage,
+        success: function() {
+          $( "#new-tweet-input").val('');
+          $( "#tweets-container" ).empty();
+          loadTweets();
+        }
       })
+      
     }
   });
 

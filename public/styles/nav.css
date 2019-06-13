@@ -14,20 +14,30 @@ nav {
     color: #e8fdff; 
     display: flex; 
     align-items: center;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+}
+
+#nav-bar div {
+    display: flex;
+    align-items: center;
 }
 
 #nav-bar .logo {
     height: 80px;
-    width: 80px;
-    float: left;
-   
+    width: 80px;   
 }
 
 #nav-bar .header {
-    float: left;
     padding-left: 10px;
     font-size: 2em;
    }
+
+#nav-bar .compose-button {
+    margin-right: 10em;
+}
 
 
 

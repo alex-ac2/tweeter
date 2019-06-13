@@ -80,6 +80,7 @@ article.tweet header > div {
 
 article.tweet header h3 {
   align-self: flex-start;
+  padding-left: 10px;
   margin: 0;
 }
 
