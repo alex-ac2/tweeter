@@ -6,10 +6,10 @@ $(document).ready(function() {
 
     switch (true) {
       case $tweetValue.length === 0:
-        alert("Please enter a tweet before submitting");
+        $("#new-tweet-error").html( "<h4>Give me something to tweet!</h4>" ).addClass("red");
         break;
       case $tweetValue.length > 140:
-        alert("Please submit max 140 characters");
+          $("#new-tweet-error").html( "<h4>I can't ingest more than 140 characters!</h4>" );
         break;
       case $tweetValue.length <= 140:
         submitTweet();
@@ -27,6 +27,7 @@ $(document).ready(function() {
         success: function() {
           $( "#new-tweet-input").val('');
           $( "#tweets-container" ).empty();
+          $("#new-tweet-error").empty().removeClass("red");
           loadTweets();
         }
       })

@@ -8,11 +8,19 @@ section.new-tweet {
   width: 400px;
 }
 
+.new-tweet.display-none {
+  display: none;
+}
+
 .counter {
   float: right;
 }
 
 .counter.red {
+  color: red;
+}
+
+.red {
   color: red;
 }
 

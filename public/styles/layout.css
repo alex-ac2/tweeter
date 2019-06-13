@@ -48,6 +48,10 @@ article.tweet {
  
 }
 
+article.new-tweet {
+  display: none;
+}
+
 article.tweet {
   width: 400px;
   background-color: #E8E8E8;

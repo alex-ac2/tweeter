@@ -37,7 +37,15 @@ nav {
 
 #nav-bar .compose-button {
     margin-right: 10em;
+    padding: 12px;
+    border-radius: 4px;
 }
 
+.orange {
+    background-color: orange;
+    color: white;
+  }
+  
+  
 
 
