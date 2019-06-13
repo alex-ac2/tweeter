@@ -11,14 +11,10 @@ $(document).ready(function () {
 
   $(".compose-button").on( "click", () => {
     console.log("Compose button was clicked");
-    // $(".new-tweet").slideToggle( 300, function() {
-    //   console.log("Animation complete");
-    //   $("#new-tweet-input").focus();
-    // });
-
+    
     $(".new-tweet").slideToggle({
       duration: 300,
-      complete: function() {
+      complete: () => {
         console.log("Animation complete");
         $("#new-tweet-input").focus();
       }

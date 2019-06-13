@@ -9,7 +9,7 @@ $(document).ready(function() {
         $("#new-tweet-error").html( "<h4>Give me something to tweet!</h4>" ).addClass("red");
         break;
       case $tweetValue.length > 140:
-          $("#new-tweet-error").html( "<h4>I can't ingest more than 140 characters!</h4>" );
+          $("#new-tweet-error").html( "<h4>I can't ingest more than 140 characters!</h4>" ).removeClass("red");
         break;
       case $tweetValue.length <= 140:
         submitTweet();
