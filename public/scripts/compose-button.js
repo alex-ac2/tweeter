@@ -9,6 +9,7 @@ $(document).ready(function () {
     $(".compose-button").removeClass("orange");
   });
 
+  // Waits for click to execute slideToggle
   $(".compose-button").on( "click", () => {
     console.log("Compose button was clicked");
     
