@@ -45,37 +45,6 @@ article.tweet {
   border-radius: 6px;
   margin: 25px;
 }
-
-article.tweet header {
-  padding-left: 15px;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 15px;
-}
-
-article.tweet header > div {
-  display: flex;
-  justify-content: space-between;
-}
-
-article.tweet header h3 {
-  align-self: flex-start;
-  padding-left: 10px;
-  margin: 0;
-}
-
-article.tweet img {
-  border-radius: 6px;
-}
-
-article.tweet header h4 {
-  float: right;
-  align-self: flex-end;
-  justify-content: flex-end;
-}
-
 article.tweet main {
   padding-left: 5px;
   width: 100%;
@@ -84,11 +53,34 @@ article.tweet main {
   height: 4em;
   background-color: #f6e1ea;
 }
-
+article.tweet header {
+  padding-left: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15px;
+}
+article.tweet header div {
+  display: flex;
+  justify-content: space-between;
+}
+article.tweet header h3 {
+  align-self: flex-start;
+  padding-left: 10px;
+  margin: 0;
+}
+article.tweet header h4 {
+  float: right;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+article.tweet img {
+  border-radius: 6px;
+}
 article.tweet p {
   margin: 0;
 }
-
 article.tweet footer {
   padding-left: 15px;
   padding-top: 5px;
