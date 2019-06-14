@@ -1,0 +1,168 @@
+section.new-tweet {
+  background-color: #E8E8E8;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+  float: left;
+  padding: 15px;
+  width: 400px;
+}
+
+.new-tweet.display-none {
+  display: none;
+}
+
+.counter {
+  float: right;
+}
+
+.counter.red {
+  color: red;
+}
+
+.red {
+  color: red;
+}
+
+textarea {
+  height: 4em;
+  max-width: 100%;
+  min-height: 4em;
+  min-width: 100%;
+  width: 100%;
+}
+
+article.new-tweet {
+  display: none;
+}
+
+article.tweet {
+  width: 400px;
+  background-color: #E8E8E8;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  margin: 25px;
+}
+
+article.tweet header {
+  padding-left: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15px;
+}
+
+article.tweet header > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+article.tweet header h3 {
+  align-self: flex-start;
+  padding-left: 10px;
+  margin: 0;
+}
+
+article.tweet img {
+  border-radius: 6px;
+}
+
+article.tweet header h4 {
+  float: right;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+article.tweet main {
+  padding-left: 5px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  height: 4em;
+  background-color: #f6e1ea;
+}
+
+article.tweet p {
+  margin: 0;
+}
+
+article.tweet footer {
+  padding-left: 15px;
+  padding-top: 5px;
+  height: 2em;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+* Global layout stuff
+*/
+body {
+  margin: 0;
+  color: #244751;
+  background-color: #eee;
+  font-family: "Roboto Condensed", sans-serif;
+  display: flex;
+}
+
+main.container {
+  padding-top: 140px;
+  padding-bottom: 25px;
+  top: 0;
+  width: 450px;
+  background-color: white;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  height: 80px;
+  background-color: #00a087;
+  color: #e8fdff;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+#nav-bar div {
+  display: flex;
+  align-items: center;
+}
+#nav-bar .logo {
+  height: 80px;
+  width: 80px;
+}
+#nav-bar .header {
+  padding-left: 10px;
+  font-size: 2em;
+}
+#nav-bar .compose-button {
+  margin-right: 10em;
+  padding: 12px;
+  border-radius: 4px;
+}
+#nav-bar .orange {
+  background-color: orange;
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */

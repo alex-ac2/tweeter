@@ -1,0 +1,33 @@
+section.new-tweet {
+    background-color: #E8E8E8;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    padding: 15px;
+    width: 400px;
+  }
+  
+.new-tweet.display-none {
+  display: none;
+}
+
+.counter {
+  float: right;
+}
+
+.counter.red {
+  color: red;
+}
+
+.red {
+  color: red;
+}
+
+textarea {
+  height: 4em;
+  max-width: 100%;
+  min-height: 4em;
+  min-width: 100%;
+  width: 100%;
+}
