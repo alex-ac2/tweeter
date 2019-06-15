@@ -7,6 +7,9 @@ section.new-tweet {
   padding: 15px;
   width: 400px;
 }
+section.new-tweet h2 {
+  border-bottom: 0.1px solid #585858;
+}
 
 .new-tweet.display-none {
   display: none;
@@ -36,14 +39,27 @@ article.new-tweet {
   display: none;
 }
 
+article.tweet:hover {
+  opacity: 1;
+}
+article.tweet:hover .icons {
+  display: inline;
+}
+
 article.tweet {
-  width: 400px;
-  background-color: #E8E8E8;
-  float: left;
+  background-clip: padding-box;
   border-style: solid;
   border-width: 1px;
   border-radius: 6px;
+  float: left;
   margin: 25px;
+  overflow: hidden;
+  opacity: 0.5;
+  width: 400px;
+  z-index: 2;
+}
+article.tweet .tweet:hover {
+  opacity: 1;
 }
 article.tweet main {
   padding-left: 5px;
@@ -51,15 +67,16 @@ article.tweet main {
   max-width: 100%;
   min-width: 100%;
   height: 4em;
-  background-color: #f6e1ea;
 }
 article.tweet header {
   padding-left: 15px;
+  background-color: #f0f0f0;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
   padding-right: 15px;
+  z-index: 1;
 }
 article.tweet header div {
   display: flex;
@@ -82,9 +99,20 @@ article.tweet p {
   margin: 0;
 }
 article.tweet footer {
+  align-items: center;
+  border-top: 0.1px solid #f0f0f0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   padding-left: 15px;
+  padding-right: 15px;
   padding-top: 5px;
   height: 2em;
+}
+article.tweet footer .icons {
+  display: none;
+  justify-content: center;
+  padding-right: 0px;
 }
 
 html {
@@ -134,6 +162,7 @@ main.container {
   flex-direction: row;
   flex-flow: row wrap;
   justify-content: space-between;
+  z-index: 10;
 }
 #nav-bar div {
   display: flex;

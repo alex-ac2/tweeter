@@ -28,6 +28,7 @@ $(document).ready(function() {
           $( "#new-tweet-input").val('');
           $( "#tweets-container" ).empty();
           $("#new-tweet-error").empty().removeClass("red");
+          $(".counter").text('140');
           loadTweets();
         }
       })

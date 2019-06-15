@@ -25,7 +25,14 @@ $(document).ready(function () {
       <main> 
         <p>${escape(tweetMessage)}</p>
       </main>
-      <footer>${dateCreated}</footer> 
+      <footer>
+        ${dateCreated}
+        <div class="icons">
+        <i class="far fa-flag"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="far fa-heart"></i>
+        </div>
+      </footer> 
     </article>      
     `
     

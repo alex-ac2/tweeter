@@ -9,7 +9,7 @@ $(document).ready(function() {
     
     const $textLength = $textArea.val().length; 
     const $remainingChar = 140 - $textLength;
-    console.log($remainingChar);
+    //console.log($remainingChar);
     
     const charCounter = $(this).siblings(".counter");
     

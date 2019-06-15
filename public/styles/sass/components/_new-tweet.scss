@@ -6,7 +6,11 @@ section.new-tweet {
     float: left;
     padding: 15px;
     width: 400px;
+  
+  h2 {
+    border-bottom: 0.1px solid rgb(88, 88, 88);
   }
+}
   
 .new-tweet.display-none {
   display: none;
@@ -30,4 +34,5 @@ textarea {
   min-height: 4em;
   min-width: 100%;
   width: 100%;
+  
 }
