@@ -6,12 +6,47 @@ section.new-tweet {
     float: left;
     padding: 15px;
     width: 400px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
   
   h2 {
     border-bottom: 0.1px solid rgb(88, 88, 88);
   }
+
+  form {
+    #tweet-options {
+      margin-top: 5px;
+    }
+    #tweet-input{
+      padding: 5px;
+      margin-top: 15px;
+
+    }
+  }
+
 }
   
+.p5Canvas {
+  display: flex;
+  margin: auto;
+}
+section.doodle-canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin: auto;
+
+  canvas.p5Canvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin: auto;
+  }
+}
+
 .new-tweet.display-none {
   display: none;
 }
@@ -31,6 +66,7 @@ section.new-tweet {
 textarea {
   height: 4em;
   max-width: 100%;
+  max-height: 250px;
   min-height: 4em;
   min-width: 100%;
   width: 100%;

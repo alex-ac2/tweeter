@@ -8,6 +8,10 @@ section.new-tweet {
   width: 400px;
 }
 
+section.doodle-canvas {
+  align-self: center;
+}
+
 .new-tweet.display-none {
   display: none;
 }

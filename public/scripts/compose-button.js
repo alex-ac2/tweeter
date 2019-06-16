@@ -1,6 +1,7 @@
 $(document).ready(function () {
   
   $("#compose-new-tweet").addClass("display-none");
+  $("#tweet-button").prop('disabled', true);
 
 
   $(".compose-button").hover( () => {
