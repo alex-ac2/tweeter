@@ -13,7 +13,7 @@ const MongoClient   = require('mongodb').MongoClient;
 const url = process.env.MONGODB_URI;
 //const url = "mongodb+srv://tweeteruser:NatWelBgGEzblskpuQCE@cluster0-gegyk.mongodb.net/test?retryWrites=true&w=majority";
 //const url = 'mongodb://localhost:27017';
-console.log(url);
+console.log('url: ', url);
 const assert = require('assert');
 const dbName = 'tweeter';
 
