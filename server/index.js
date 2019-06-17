@@ -10,10 +10,10 @@ const app           = express();
 
 const MongoClient   = require('mongodb').MongoClient;
 //const MONGODB_URI = process.env.MONGODB_URI;
-const url = process.env.MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI;
 //const url = "mongodb+srv://tweeteruser:NatWelBgGEzblskpuQCE@cluster0-gegyk.mongodb.net/test?retryWrites=true&w=majority";
 //const url = 'mongodb://localhost:27017';
-console.log('url: ', url);
+console.log('url: ', MONGODB_URI);
 const assert = require('assert');
 const dbName = 'tweeter';
 
@@ -24,7 +24,7 @@ app.use(express.static("public"));
 // const db = require("./lib/in-memory-db"); 
 //const client = new MongoClient(url, { useNewUrlParser: true });
 
-MongoClient.connect(url, function(err, client) {
+MongoClient.connect(MONGODB_URI, function(err, client) {
   assert.equal(null, err);
   console.log("Connected successfully to server");
 
