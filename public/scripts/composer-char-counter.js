@@ -11,7 +11,7 @@ $(document).ready(function() {
     const $remainingChar = 140 - $textLength;
     //console.log($remainingChar);
     
-    const charCounter = $(this).siblings(".counter");
+    const charCounter = $("#tweet-options").children(".counter");
     
     // Update counter to include remaining character
     charCounter[0].innerHTML = $remainingChar;

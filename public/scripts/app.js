@@ -10,7 +10,22 @@ $(document).ready(function () {
     const { name, handle } = tweet.user;
     const avatar = tweet.user.avatars.small;
     const tweetMessage = tweet.content.text;
+    const tweetDoodle = tweet.content.doodle;
     const dateCreated = tweet.created_at;
+
+    // Determine message body whether tweet or doodle
+    let messageBody;
+    console.log(tweetDoodle);
+    if (tweetDoodle === null || tweetDoodle === undefined) {
+      messageBody = `<p>${escape(tweetMessage)}</p>`;
+    } else {
+      messageBody = `<img src="${tweetDoodle}"/>`;
+    }
+    console.log("message: ", messageBody);
+    // <img src="${tweetDoodle}"/>
+    // <p>${escape(tweetMessage)}</p>
+    
+
 
     const $tweetArticle = 
       `
@@ -22,8 +37,8 @@ $(document).ready(function () {
         </div>
         <h4>${handle}</h4>
       </header>
-      <main> 
-        <p>${escape(tweetMessage)}</p>
+      <main>
+        ${messageBody}
       </main>
       <footer>
         ${dateCreated}

@@ -90,11 +90,21 @@ article.tweet .tweet:hover {
   opacity: 1;
 }
 article.tweet main {
-  padding-left: 5px;
   width: 100%;
   max-width: 100%;
   min-width: 100%;
-  height: 4em;
+  height: 100%;
+  min-height: 4em;
+  display: flex;
+}
+article.tweet main p {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 30px;
+}
+article.tweet main img {
+  margin: auto;
+  align-self: center;
 }
 article.tweet header {
   padding-left: 15px;
