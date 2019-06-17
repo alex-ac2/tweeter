@@ -15,13 +15,13 @@ $(document).ready(function () {
 
     // Determine message body whether tweet or doodle
     let messageBody;
-    console.log(tweetDoodle);
-    if (tweetDoodle === null || tweetDoodle === undefined) {
+    
+    if (tweetDoodle === null || tweetDoodle === undefined || tweetDoodle === "") {
       messageBody = `<p>${escape(tweetMessage)}</p>`;
     } else {
       messageBody = `<img src="${tweetDoodle}"/>`;
     }
-    console.log("message: ", messageBody);
+    
     // <img src="${tweetDoodle}"/>
     // <p>${escape(tweetMessage)}</p>
     

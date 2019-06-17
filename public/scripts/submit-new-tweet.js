@@ -3,19 +3,16 @@ $(document).ready(function() {
     event.preventDefault();
     
     let $tweetValue = $('#new-tweet-input').val();
-    
+    let doodleDataPackage;
+
     // Convert image to base64
     const canvas = document.getElementById('defaultCanvas0');
-    const doodleDataPackage = canvas.toDataURL('image/jpeg', 1.0);
-    console.log(doodleDataPackage);
-    // const doodleDataBlob = canvas.toBlob( (blob) => {
-    //   console.log('innner: ', blob);
-    // }, 'image/jpeg', 1.0);
-    // console.log('outer blob: ', doodleDataBlob);
-
+    doodleDataPackage = canvas.toDataURL('image/jpeg', 1.0);
+    
     switch (true) {
       case $("#doodle-button").is(':disabled'):
         $tweetValue = null;
+        console.log("tweet value null?");
         submitTweet();
         break;
       case $tweetValue.length === 0:
@@ -25,6 +22,7 @@ $(document).ready(function() {
           $("#new-tweet-error").html( "<h4>I can't ingest more than 140 characters!</h4>" ).removeClass("red");
         break;
       case $tweetValue.length <= 140:
+        doodleDataPackage = null;
         submitTweet();
         break;
     }
@@ -49,6 +47,14 @@ $(document).ready(function() {
           $("#new-tweet-error").empty().removeClass("red");
           $(".counter").text('140');
           background(255);
+          if ($("#doodle-button").is(':disabled')) {
+            $("#tweet-button").prop('disabled', true);
+            $("#doodle-button").prop('disabled', false);
+            $("#new-tweet-input").toggle(400);
+            $("#new-tweet-input").focus();
+            $("#doodle-canvas").hide(400);
+          }
+
           loadTweets();
         },
         error: function (err) {
