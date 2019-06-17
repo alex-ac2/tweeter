@@ -23,10 +23,10 @@ Heroku Deployment: <https://tweeter-doodle.herokuapp.com/>
 ## Final Project
 
 URLs Page:
-!["Screenshot of URLs Page"]
+!["Screenshot of URLs Page"](docs/screenshots/tweeter_homepage.png)
 
 Doodle Feature Screenshot:
-!["Doodle Feature Screenshot"]
+!["Doodle Feature Screenshot"](docs/screenshots/tweeter_doodle_feature.png)
 
 140+ Character Error message: 
-!["140+ Character Error message"]
+!["140+ Character Error message"](docs/screenshots/tweeter_error_message.png)
