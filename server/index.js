@@ -3,12 +3,17 @@
 // Basic express setup:
 
 const PORT          = 8080;
+require('dotenv').config();
 const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
 
 const MongoClient   = require('mongodb').MongoClient;
-const url = 'mongodb://localhost:27017';
+//const MONGODB_URI = process.env.MONGODB_URI;
+const url = process.env.MONGODB_URI;
+//const url = "mongodb+srv://tweeteruser:NatWelBgGEzblskpuQCE@cluster0-gegyk.mongodb.net/test?retryWrites=true&w=majority";
+//const url = 'mongodb://localhost:27017';
+console.log(url);
 const assert = require('assert');
 const dbName = 'tweeter';
 
@@ -17,6 +22,7 @@ app.use(express.static("public"));
 
 // The in-memory database of tweets. It's a basic object with an array in it.
 // const db = require("./lib/in-memory-db"); 
+//const client = new MongoClient(url, { useNewUrlParser: true });
 
 MongoClient.connect(url, function(err, client) {
   assert.equal(null, err);
