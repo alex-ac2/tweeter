@@ -28,28 +28,28 @@ $(document).ready(function () {
 
 
     const $tweetArticle = 
+        `
+      <article class="tweet">
+        <header>
+          <div>
+            <img class="avatar" src=${avatar}>
+            <h3>${name}</h3>
+          </div>
+          <h4>${handle}</h4>
+        </header>
+        <main>
+          ${messageBody}
+        </main>
+        <footer>
+          ${dateCreated}
+          <div class="icons">
+          <i class="far fa-flag"></i>
+          <i class="fas fa-retweet"></i>
+          <i class="far fa-heart"></i>
+          </div>
+        </footer> 
+      </article>      
       `
-    <article class="tweet">
-      <header>
-        <div>
-          <img class="avatar" src=${avatar}>
-          <h3>${name}</h3>
-        </div>
-        <h4>${handle}</h4>
-      </header>
-      <main>
-        ${messageBody}
-      </main>
-      <footer>
-        ${dateCreated}
-        <div class="icons">
-        <i class="far fa-flag"></i>
-        <i class="fas fa-retweet"></i>
-        <i class="far fa-heart"></i>
-        </div>
-      </footer> 
-    </article>      
-    `
     
 
     return $tweetArticle;
