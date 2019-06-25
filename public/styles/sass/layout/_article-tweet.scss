@@ -23,6 +23,7 @@ article.tweet {
     overflow: hidden;
     opacity: 0.6;
     width: 400px;
+    word-wrap: break-word;
     z-index: 2;
 
     .tweet:hover{
