@@ -1,6 +1,8 @@
 $(document).ready(function () {
+  jQuery("time.timeago").timeago();
   loadTweets();
  
+
 });
 
 
@@ -12,6 +14,21 @@ $(document).ready(function () {
     const tweetMessage = tweet.content.text;
     const tweetDoodle = tweet.content.doodle;
     const dateCreated = tweet.created_at;
+
+    // Format date
+    //let dateSince = Math.round((Date.now() - dateCreated) / 60 * 0.10);
+    let formattedDate;
+
+    // switch (true) {
+    //   case (dateSince < 60):
+    //     formattedDate = `${dateSince} seconds ago`;
+    //     break;  
+    //   case (dateSince > 60 )
+    // }
+
+    // let = dateMessage = `${formattedDate} seconds ago`;
+    let dateMessage = jQuery.timeago(dateCreated);
+
 
     // Determine message body whether tweet or doodle
     let messageBody;
@@ -41,7 +58,7 @@ $(document).ready(function () {
           ${messageBody}
         </main>
         <footer>
-          ${dateCreated}
+          ${dateMessage}
           <div class="icons">
           <i class="far fa-flag"></i>
           <i class="fas fa-retweet"></i>

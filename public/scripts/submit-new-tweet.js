@@ -2,7 +2,7 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
     
-    let $tweetValue = $('#new-tweet-input').val();
+    let $tweetValue = $('#new-tweet-input').val().trim();
     let doodleDataPackage;
 
     // Convert image to base64
