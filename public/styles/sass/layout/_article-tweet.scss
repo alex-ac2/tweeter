@@ -4,6 +4,8 @@ display: none;
 
 article.tweet:hover {
     opacity: 1;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
 
     .icons {
         display: inline;
@@ -25,6 +27,8 @@ article.tweet {
 
     .tweet:hover{
         opacity: 1;
+        border-bottom-width: 2px;
+        border-right-width: 2px;
     }
 
     main {

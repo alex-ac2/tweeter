@@ -1,15 +1,16 @@
 # Tweeter-Doodle Project
 
-Tweeter-Doodle is a simple, single-page Twitter clone that incorporates an added doodle feature for users to submit.
+Tweeter-Doodle is a simple, single-page Twitter clone that incorporates an added doodle feature for users to submit.  Users can either submit a tweet or post a doodle. Enjoy! 
 
 Heroku Deployment: <https://tweeter-doodle.herokuapp.com/>
 
-## Getting Started
+## Run Locally
 
-1. Fork this repository, then clone your fork of this repository.
+1. Clone this repository
 2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:3000/>.
-4. Go to <http://localhost:3000/> in your browser.
+3. Copy .env.example to .env and place in root directory of project.  
+4. Start the web server using the `npm run local` command. The app will be served at <http://localhost:3000/>.
+5. Go to <http://localhost:3000/> in your browser.
 
 ## Dependencies
 
@@ -17,6 +18,10 @@ Heroku Deployment: <https://tweeter-doodle.herokuapp.com/>
 - dotenv
 - Express
 - MongoDB
+- Express
+- Chance
+- md5
+- Nodemon
 - Node 5.10.x or above
 
 ---

@@ -2,17 +2,16 @@
 
 // Basic express setup:
 
-const PORT          = process.env.PORT || 3000;
 require('dotenv').config();
+const PORT          = process.env.PORT || 3000;
 const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
 
 const MongoClient   = require('mongodb').MongoClient;
-//const MONGODB_URI = process.env.MONGODB_URI;
+
 const MONGODB_URI = process.env.MONGODB_URI;
-//const url = "mongodb+srv://tweeteruser:NatWelBgGEzblskpuQCE@cluster0-gegyk.mongodb.net/test?retryWrites=true&w=majority";
-//const url = 'mongodb://localhost:27017';
+
 console.log('url: ', MONGODB_URI);
 const assert = require('assert');
 const dbName = 'tweeter';

@@ -1,10 +1,9 @@
 $(document).ready(function () {
+  
   jQuery("time.timeago").timeago();
   loadTweets();
  
-
 });
-
 
   // Renders article element for each tweet, placed in tweet-container
   function createTweetElement(tweet) {
@@ -15,20 +14,7 @@ $(document).ready(function () {
     const tweetDoodle = tweet.content.doodle;
     const dateCreated = tweet.created_at;
 
-    // Format date
-    //let dateSince = Math.round((Date.now() - dateCreated) / 60 * 0.10);
-    let formattedDate;
-
-    // switch (true) {
-    //   case (dateSince < 60):
-    //     formattedDate = `${dateSince} seconds ago`;
-    //     break;  
-    //   case (dateSince > 60 )
-    // }
-
-    // let = dateMessage = `${formattedDate} seconds ago`;
     let dateMessage = jQuery.timeago(dateCreated);
-
 
     // Determine message body whether tweet or doodle
     let messageBody;
@@ -39,11 +25,6 @@ $(document).ready(function () {
       messageBody = `<img src="${tweetDoodle}"/>`;
     }
     
-    // <img src="${tweetDoodle}"/>
-    // <p>${escape(tweetMessage)}</p>
-    
-
-
     const $tweetArticle = 
         `
       <article class="tweet">
@@ -60,16 +41,15 @@ $(document).ready(function () {
         <footer>
           ${dateMessage}
           <div class="icons">
-          <i class="far fa-flag"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="far fa-heart"></i>
+            <i class="far fa-flag"></i>
+            <i class="fas fa-retweet"></i>
+            <i class="far fa-heart"></i>
           </div>
         </footer> 
       </article>      
       `
-    
-
-    return $tweetArticle;
+ 
+      return $tweetArticle;
   }
   
   // Loops through tweet array append to tweets-container
@@ -91,7 +71,6 @@ $(document).ready(function () {
       renderTweets(tweetDB);
     });
   }
-
 
   // Escape function to protect against xss
   function escape(str) {

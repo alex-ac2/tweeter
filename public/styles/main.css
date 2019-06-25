@@ -69,6 +69,8 @@ article.new-tweet {
 
 article.tweet:hover {
   opacity: 1;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
 }
 article.tweet:hover .icons {
   display: inline;
@@ -88,6 +90,8 @@ article.tweet {
 }
 article.tweet .tweet:hover {
   opacity: 1;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
 }
 article.tweet main {
   width: 100%;

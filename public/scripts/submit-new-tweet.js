@@ -27,9 +27,6 @@ $(document).ready(function() {
         break;
     }
 
-
-   
-
     function submitTweet() {
       const $tweetMessage = $('#new-tweet-input').serialize(); 
       console.log($tweetMessage);
@@ -63,9 +60,7 @@ $(document).ready(function() {
 
         }
       })
-      
     }
   });
-
 
 });
